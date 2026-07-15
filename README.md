@@ -336,17 +336,17 @@ npm run dev
 
 #  Why StudyBridge?
 
-✅ Learns your syllabus
+• Learns your syllabus
 
-✅ Works on WhatsApp
+• Works on WhatsApp
 
-✅ Uses Socratic teaching
+• Uses Socratic teaching
 
-✅ Tracks weaknesses
+• Tracks weaknesses
 
-✅ Builds revision plans
+• Builds revision plans
 
-✅ Requires zero installation
+• Requires zero installation
 
 ---
 
@@ -382,13 +382,22 @@ MIT
 
 ---
 
-# ❤️ Built For
+#  Built For
 
 OpenAI Hackathon 2026 — Education Track
 
 Empowering students everywhere with AI tutoring that teaches **how to think**, not just **what to answer**.
 
 ---
+
+## Team
+
+•Ibrahim Ashiah Ajoke
+
+•Emmanuel Olayinka
+
+---
+
 
 ## 🏆 Vision
 
