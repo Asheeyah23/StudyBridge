@@ -1,6 +1,6 @@
 # 🎓 StudyBridge
 
-> **AI Socratic tutoring on WhatsApp — personalized to your syllabus.**
+> **AI Socratic tutoring on WhatsApp  — personalized to your syllabus.**
 
 StudyBridge transforms WhatsApp into an intelligent AI tutor that helps students **learn, not just get answers**.
 
@@ -384,7 +384,7 @@ MIT
 
 #  Built For
 
-OpenAI Hackathon 2026 — Education Track
+OpenAI Hackathon 2026  — Education Track
 
 Empowering students everywhere with AI tutoring that teaches **how to think**, not just **what to answer**.
 
@@ -399,8 +399,8 @@ Empowering students everywhere with AI tutoring that teaches **how to think**, n
 ---
 
 
-## 🏆 Vision
+##  Vision
 
 We believe every student deserves access to a world-class tutor.
 
-StudyBridge makes that tutor available through the most familiar app in the world—**WhatsApp**—turning every homework question into an opportunity to build understanding, confidence, and lifelong learning.
+StudyBridge makes that tutor available through the most familiar app in the world **WhatsApp** turning every homework question into an opportunity to build understanding, confidence, and lifelong learning.
