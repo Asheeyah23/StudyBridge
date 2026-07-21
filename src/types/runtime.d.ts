@@ -5,7 +5,7 @@ declare const process: {
 };
 
 declare const Buffer: {
-  from(input: ArrayBuffer): { toString(encoding: 'base64'): string };
+  from(input: ArrayBuffer | string): { toString(encoding: 'base64'): string };
 };
 
 declare module 'express' {
@@ -18,6 +18,7 @@ declare module 'express' {
     send(body: unknown): Response;
     json(body: unknown): Response;
     sendStatus(code: number): Response;
+    type(value: string): Response;
     headersSent: boolean;
   }
   export type NextFunction = (error?: unknown) => void;
@@ -32,8 +33,42 @@ declare module 'express' {
   interface ExpressFactory {
     (): ExpressApp;
     json(options?: unknown): unknown;
+    urlencoded(options?: unknown): unknown;
   }
   export function Router(): RouterInstance;
   const express: ExpressFactory;
   export default express;
+}
+
+
+declare module 'twilio' {
+  interface MessageCreateOptions {
+    from: string;
+    to: string;
+    body: string;
+  }
+  interface TwilioClient {
+    messages: { create(options: MessageCreateOptions): Promise<unknown> };
+  }
+  export default function twilio(accountSid: string, authToken: string): TwilioClient;
+}
+
+
+declare module 'groq-sdk' {
+  type ChatMessageContent = string | Array<{ type: 'text'; text: string } | { type: 'image_url'; image_url: { url: string } }>;
+  interface ChatCompletionCreateOptions {
+    model: string;
+    messages: Array<{ role: 'user' | 'assistant' | 'system'; content: ChatMessageContent }>;
+    response_format?: { type: 'json_object' };
+  }
+  interface ChatCompletionResponse {
+    choices: Array<{ message?: { content?: string | null } }>;
+  }
+  interface GroqClient {
+    chat: { completions: { create(options: ChatCompletionCreateOptions): Promise<ChatCompletionResponse> } };
+  }
+  export default class Groq implements GroqClient {
+    constructor(options: { apiKey: string });
+    chat: GroqClient['chat'];
+  }
 }
